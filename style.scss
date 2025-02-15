@@ -1,0 +1,692 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #0e0e0e;
+}
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+main {
+  width: 100%;
+}
+.view-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 4rem;
+
+  img {
+    width: 80%;
+    object-fit: cover;
+  }
+  h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    font-weight: 100;
+  }
+  p {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 100;
+    line-height: 1.6;
+    margin: 0.7rem 0;
+    opacity: 0.6;
+
+    br {
+      display: none;
+    }
+  }
+}
+h1,
+p {
+  color: wheat;
+}
+
+.view-2 {
+  width: 100%;
+  padding: 4rem 3rem;
+  display: flex;
+  justify-content: center;
+  .marquee {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 30%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: linear-gradient(to right, #0e0e0e, transparent);
+    }
+
+    &::before {
+      content: "";
+      width: 30%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: linear-gradient(to left, #0e0e0e, transparent);
+    }
+
+    .image {
+      display: flex;
+      gap: 3rem;
+      padding: 0 1.5rem;
+      animation: marquee 10s linear infinite both;
+    }
+  }
+}
+
+.view-3 {
+  width: 100%;
+  padding: 2rem;
+  color: wheat;
+}
+
+.container {
+  width: 100%;
+  gap: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .item {
+    padding: 2rem;
+  }
+
+  h4 {
+    font-weight: 100;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+  }
+
+  .one {
+    padding-bottom: 1rem;
+  }
+}
+
+/* Assign styles to grid items */
+.images-a {
+  grid-area: a;
+  background-color: rgb(26, 26, 26);
+  min-height: 200px;
+}
+
+.images-b {
+  grid-area: b;
+  background-color: rgb(26, 26, 26);
+  min-height: 200px;
+}
+
+.images-c {
+  grid-area: c;
+  background-color: rgb(26, 26, 26);
+  min-height: 200px;
+}
+
+.view-4 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 4rem;
+
+  h1 {
+    font-size: 2.6rem;
+    font-weight: 100;
+  }
+}
+
+.view-5 {
+  align-items: center;
+  width: 100%;
+  padding:1rem 2rem;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  gap: 20px;
+  display: grid;
+  grid-template-areas:
+    "a"
+    "b"
+    "c"
+    "d";
+
+  img {
+    width: 380px;
+    height: 300px;
+    object-fit: cover;
+  }
+}
+.img-a {
+  grid-area: a;
+}
+.img-b {
+  grid-area: b;
+}
+.img-c {
+  grid-area: c;
+}
+.img-d {
+  grid-area: d;
+}
+
+.view-6{
+    .con1{
+      padding: 1rem;
+        margin-top: 30px;
+        width:100%;
+        gap:20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+
+        h1{
+            font-size: 3.7rem;
+            font-weight: 100;
+            text-align: center;
+            
+        }
+        p{
+            font-size: 1.2rem;
+            text-align: center;
+            br{
+            display: none;
+            }
+        }
+    }
+}
+
+.view-7 {
+  width: 100%;
+  padding: 2rem;
+  color: wheat;
+}
+
+.con2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Keeps testimonials stacked */
+ align-items: center;
+  
+  gap: 13px; /* Adds space between each .items div */
+}
+
+.con2 img{
+  display: flex;
+  justify-content: flex-start;
+  
+}
+.items {
+  width: 100%; /* Ensures containers are visible */
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+
+  h5{
+    padding-top: 15px;
+  }
+}
+
+.con2 .items .con3{
+  width:100%;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  gap:10px;
+  padding-top: 30px;
+
+  img{
+    height:70px;
+    width:70px;
+    border-radius: 50%;
+  }
+}
+
+.items h5 {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.items p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+.view-8{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 4rem;
+  h1{
+    font-weight: 100;
+    margin-bottom: 10px;
+    font-size: 40px;
+  }
+   
+  h6{
+    margin-top: 20px;
+    color:wheat;
+    font-size: 32px;
+    font-weight: 100;
+    text-align: center;
+
+  }
+  img {
+    width: 80%;
+    object-fit: cover;
+}
+
+p{
+  margin-top: 20px;
+  text-align: center;
+  font-size: 17px;
+  br{
+    display: none;
+  }
+}
+}
+
+
+.view-9{
+  padding-top: 10px;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap:10px;
+ 
+  img{
+ 
+padding:5px;
+    background-color: #1a1a1a;
+    height:45px;
+    width:45px;
+    border-radius: 50%;
+  }
+}
+
+
+
+.view-10 {
+  width: 100%;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  .marquee2 {
+    background-color: #1a1a1a;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+   
+    p{
+      display: inline-block;
+    }
+
+    .elements {
+      width: auto;
+      display: flex;
+      gap: 3rem;
+     
+      animation: marquee 10s linear infinite both;
+    }
+  }
+}
+
+
+.section-11{
+  cursor: pointer;
+  background-color:#1D1E1F;
+  color: wheat;
+  padding: 2rem 3rem;
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:10px;
+  .two{
+    padding-top: 30px;
+  }
+
+  h1{
+    font-size: 55px;
+    text-align: center;
+    font-weight: 300;
+    i{
+      text-align: center;
+      font-size: 55px;
+
+    }
+  }
+
+  p{
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 20px;
+
+    br{
+      display: none;
+    }
+  }
+
+  .btn{
+    background-color: wheat;
+    font-size: 14px;
+    width:150px;
+    height:35px;
+  }
+}
+
+.view-12{
+  cursor: pointer;
+  background-color: #1D1E1F;
+  color:wheat;
+  width:100%;
+  padding-top: 20px;
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .con-5{
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+gap:30px;
+  }
+
+  P{
+    line-height: 50px;
+  }
+
+  h2{
+    font-size:30px;
+    font-weight: 100;
+    padding-bottom: 40px;
+  }
+  .page{
+    padding-top: 50px;
+    text-align: center;
+  }
+  .btn{
+    background-color: wheat;
+    font-size: 14px;
+    width:200px;
+    height:35px;
+  }
+
+  .copy{
+    padding-top: 30px;
+    font-size: 14px;
+  }
+  img{
+ 
+    padding:5px;
+        background-color: #1a1a1a;
+        height:45px;
+        width:45px;
+        border-radius: 50%;
+      }
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (min-width: 1080px) {
+  html {
+    font-size: clamp(16px, 1vw, 20px);
+
+    .view-1 {
+      img {
+        width: 28%;
+      }
+      h1 {
+        font-size: 8.5rem;
+      }
+      p {
+        font-size: 1.5rem;
+        br {
+          display: block;
+        }
+      }
+    }
+
+    .view-2 {
+      .marquee {
+        width: 50%;
+      }
+    }
+
+    .view-3 {
+      .container {
+        margin-bottom: 60px;
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        flex-direction: row;
+        align-items: center;
+      }
+      .item {
+        width: 100%;
+        height: 300px;
+        padding: 3rem;
+        padding-bottom: 3rem;
+
+        .one {
+          padding-bottom: 2rem;
+        }
+      }
+    }
+    .view-4{
+        padding: 1rem 7rem;
+        display: flex;
+        flex-direction: row;
+        align-items:end;
+        justify-content: space-between;
+        margin-bottom: 0;
+        h1{
+            font-size: 2.5rem;
+        }
+    }
+    .view-5{
+        
+        display: grid;
+        gap:20px;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 2fr;
+        grid-template-areas: 
+        "a b"
+        "c d";
+        img{
+            object-fit:content;
+            aspect-ratio: 16/9;
+            height: 480px;
+            width: 720px;
+        }
+    }
+
+    .view-6{
+      .con1{
+        p{
+          font-size: 1.2rem;
+          br{
+            display:block;
+          }
+        }
+      }
+    }
+
+    .view-7{
+      padding-top:0;
+      
+      .con2{
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        gap:30px;
+        padding: 3rem 6rem;
+          
+        .items{
+          width:600px;
+          height:400px;
+          padding: 2rem 3rem;
+
+          h5{
+            font-size: 30px;
+          }
+        }
+
+        
+      }
+    }
+
+    .view-8{
+      img {
+        width: 28%;
+      }
+      h1{
+        font-size: 100px;
+      }
+
+      p{
+        font-size: 20px;
+        font-weight: 100;
+      
+    }
+      h6{
+        font-size: 45px;
+      }
+      .con4{
+        text-align: center;
+        justify-content: center;
+        padding: 50px;
+       display: grid;
+       gap:260px;
+       grid-template-areas: 
+       "a b";
+      }
+
+      .text-a{
+        grid-area:a;
+      }
+      .text-b{
+        grid-area:b;
+      }
+    }
+
+
+.view-10{
+  .marquee2{
+  margin-top: 120px;
+  }
+}
+
+
+.section-11{
+color:wheat;
+padding-top:7%;
+      width:100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:10px;
+  .two{
+    padding-top: 30px;
+  }
+
+  h1{
+    font-size: 130px;
+    text-align: center;
+    font-weight: 300;
+    i{
+      text-align: center;
+      font-size: 120px;
+
+    }
+  }
+
+  p{
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 20px;
+    br{
+      display: block;
+    }
+  }
+
+  .btn{
+    font-size: 18px;
+    width:150px;
+    height:35px;
+  }
+}
+
+.view-12{
+  .view-12-main{
+    justify-content: space-between;
+      display: grid;
+      grid-template-areas:
+      "a b c d";
+      gap:190px;
+  
+
+      .img-a{
+        grid-area: a;
+      }
+      img-b{
+        grid-area:b;
+      }
+
+      .img-c{
+        grid-area:c;
+      }
+      .img-d{
+        grid-area:d;
+      }
+
+      
+  }
+}
+
+.copy{
+  margin-top: 40px;
+}
+
+
+  
+}
+    }
+
+    
+  

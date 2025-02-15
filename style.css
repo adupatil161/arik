@@ -1,0 +1,603 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #0e0e0e;
+}
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+main {
+  width: 100%;
+}
+
+.view-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 4rem;
+}
+.view-1 img {
+  width: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.view-1 h1 {
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: 100;
+}
+.view-1 p {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 100;
+  line-height: 1.6;
+  margin: 0.7rem 0;
+  opacity: 0.6;
+}
+.view-1 p br {
+  display: none;
+}
+
+h1,
+p {
+  color: wheat;
+}
+
+.view-2 {
+  width: 100%;
+  padding: 4rem 3rem;
+  display: flex;
+  justify-content: center;
+}
+.view-2 .marquee {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.view-2 .marquee::after {
+  content: "";
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #0e0e0e, transparent);
+}
+.view-2 .marquee::before {
+  content: "";
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(to left, #0e0e0e, transparent);
+}
+.view-2 .marquee .image {
+  display: flex;
+  gap: 3rem;
+  padding: 0 1.5rem;
+  animation: marquee 10s linear infinite both;
+}
+
+.view-3 {
+  width: 100%;
+  padding: 2rem;
+  color: wheat;
+}
+
+.container {
+  width: 100%;
+  gap: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .item {
+  padding: 2rem;
+}
+.container h4 {
+  font-weight: 100;
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+}
+.container .one {
+  padding-bottom: 1rem;
+}
+
+/* Assign styles to grid items */
+.images-a {
+  grid-area: a;
+  background-color: rgb(26, 26, 26);
+  min-height: 200px;
+}
+
+.images-b {
+  grid-area: b;
+  background-color: rgb(26, 26, 26);
+  min-height: 200px;
+}
+
+.images-c {
+  grid-area: c;
+  background-color: rgb(26, 26, 26);
+  min-height: 200px;
+}
+
+.view-4 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 4rem;
+}
+.view-4 h1 {
+  font-size: 2.6rem;
+  font-weight: 100;
+}
+
+.view-5 {
+  align-items: center;
+  width: 100%;
+  padding: 1rem 2rem;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  gap: 20px;
+  display: grid;
+  grid-template-areas: "a" "b" "c" "d";
+}
+.view-5 img {
+  width: 380px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img-a {
+  grid-area: a;
+}
+
+.img-b {
+  grid-area: b;
+}
+
+.img-c {
+  grid-area: c;
+}
+
+.img-d {
+  grid-area: d;
+}
+
+.view-6 .con1 {
+  padding: 1rem;
+  margin-top: 30px;
+  width: 100%;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.view-6 .con1 h1 {
+  font-size: 3.7rem;
+  font-weight: 100;
+  text-align: center;
+}
+.view-6 .con1 p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+.view-6 .con1 p br {
+  display: none;
+}
+
+.view-7 {
+  width: 100%;
+  padding: 2rem;
+  color: wheat;
+}
+
+.con2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Keeps testimonials stacked */
+  align-items: center;
+  gap: 13px; /* Adds space between each .items div */
+}
+
+.con2 img {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.items {
+  width: 100%; /* Ensures containers are visible */
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+}
+.items h5 {
+  padding-top: 15px;
+}
+
+.con2 .items .con3 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding-top: 30px;
+}
+.con2 .items .con3 img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.items h5 {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.items p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.view-8 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 4rem;
+}
+.view-8 h1 {
+  font-weight: 100;
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+.view-8 h6 {
+  margin-top: 20px;
+  color: wheat;
+  font-size: 32px;
+  font-weight: 100;
+  text-align: center;
+}
+.view-8 img {
+  width: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.view-8 p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 17px;
+}
+.view-8 p br {
+  display: none;
+}
+
+.view-9 {
+  padding-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.view-9 img {
+  padding: 5px;
+  background-color: #1a1a1a;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
+
+.view-10 {
+  width: 100%;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.view-10 .marquee2 {
+  background-color: #1a1a1a;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.view-10 .marquee2 p {
+  display: inline-block;
+}
+.view-10 .marquee2 .elements {
+  width: auto;
+  display: flex;
+  gap: 3rem;
+  animation: marquee 10s linear infinite both;
+}
+
+.section-11 {
+  cursor: pointer;
+  background-color: #1D1E1F;
+  color: wheat;
+  padding: 2rem 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.section-11 .two {
+  padding-top: 30px;
+}
+.section-11 h1 {
+  font-size: 55px;
+  text-align: center;
+  font-weight: 300;
+}
+.section-11 h1 i {
+  text-align: center;
+  font-size: 55px;
+}
+.section-11 p {
+  text-align: center;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+.section-11 p br {
+  display: none;
+}
+.section-11 .btn {
+  background-color: wheat;
+  font-size: 14px;
+  width: 150px;
+  height: 35px;
+}
+
+.view-12 {
+  cursor: pointer;
+  background-color: #1D1E1F;
+  color: wheat;
+  width: 100%;
+  padding-top: 20px;
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.view-12 .con-5 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.view-12 P {
+  line-height: 50px;
+}
+.view-12 h2 {
+  font-size: 30px;
+  font-weight: 100;
+  padding-bottom: 40px;
+}
+.view-12 .page {
+  padding-top: 50px;
+  text-align: center;
+}
+.view-12 .btn {
+  background-color: wheat;
+  font-size: 14px;
+  width: 200px;
+  height: 35px;
+}
+.view-12 .copy {
+  padding-top: 30px;
+  font-size: 14px;
+}
+.view-12 img {
+  padding: 5px;
+  background-color: #1a1a1a;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@media (min-width: 1080px) {
+  html {
+    font-size: clamp(16px, 1vw, 20px);
+  }
+  html .view-1 img {
+    width: 28%;
+  }
+  html .view-1 h1 {
+    font-size: 8.5rem;
+  }
+  html .view-1 p {
+    font-size: 1.5rem;
+  }
+  html .view-1 p br {
+    display: block;
+  }
+  html .view-2 .marquee {
+    width: 50%;
+  }
+  html .view-3 .container {
+    margin-bottom: 60px;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    align-items: center;
+  }
+  html .view-3 .item {
+    width: 100%;
+    height: 300px;
+    padding: 3rem;
+    padding-bottom: 3rem;
+  }
+  html .view-3 .item .one {
+    padding-bottom: 2rem;
+  }
+  html .view-4 {
+    padding: 1rem 7rem;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+  html .view-4 h1 {
+    font-size: 2.5rem;
+  }
+  html .view-5 {
+    display: grid;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 2fr;
+    grid-template-areas: "a b" "c d";
+  }
+  html .view-5 img {
+    -o-object-fit: content;
+       object-fit: content;
+    aspect-ratio: 16/9;
+    height: 480px;
+    width: 720px;
+  }
+  html .view-6 .con1 p {
+    font-size: 1.2rem;
+  }
+  html .view-6 .con1 p br {
+    display: block;
+  }
+  html .view-7 {
+    padding-top: 0;
+  }
+  html .view-7 .con2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 3rem 6rem;
+  }
+  html .view-7 .con2 .items {
+    width: 600px;
+    height: 400px;
+    padding: 2rem 3rem;
+  }
+  html .view-7 .con2 .items h5 {
+    font-size: 30px;
+  }
+  html .view-8 img {
+    width: 28%;
+  }
+  html .view-8 h1 {
+    font-size: 100px;
+  }
+  html .view-8 p {
+    font-size: 20px;
+    font-weight: 100;
+  }
+  html .view-8 h6 {
+    font-size: 45px;
+  }
+  html .view-8 .con4 {
+    text-align: center;
+    justify-content: center;
+    padding: 50px;
+    display: grid;
+    gap: 260px;
+    grid-template-areas: "a b";
+  }
+  html .view-8 .text-a {
+    grid-area: a;
+  }
+  html .view-8 .text-b {
+    grid-area: b;
+  }
+  html .view-10 .marquee2 {
+    margin-top: 120px;
+  }
+  html .section-11 {
+    color: wheat;
+    padding-top: 7%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  html .section-11 .two {
+    padding-top: 30px;
+  }
+  html .section-11 h1 {
+    font-size: 130px;
+    text-align: center;
+    font-weight: 300;
+  }
+  html .section-11 h1 i {
+    text-align: center;
+    font-size: 120px;
+  }
+  html .section-11 p {
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+  html .section-11 p br {
+    display: block;
+  }
+  html .section-11 .btn {
+    font-size: 18px;
+    width: 150px;
+    height: 35px;
+  }
+  html .view-12 .view-12-main {
+    justify-content: space-between;
+    display: grid;
+    grid-template-areas: "a b c d";
+    gap: 190px;
+  }
+  html .view-12 .view-12-main .img-a {
+    grid-area: a;
+  }
+  html .view-12 .view-12-main img-b {
+    grid-area: b;
+  }
+  html .view-12 .view-12-main .img-c {
+    grid-area: c;
+  }
+  html .view-12 .view-12-main .img-d {
+    grid-area: d;
+  }
+  html .copy {
+    margin-top: 40px;
+  }
+}/*# sourceMappingURL=style.css.map */
